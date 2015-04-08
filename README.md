@@ -19,10 +19,14 @@ Installation Instruction: (Tested in ubuntu 14.04)
 
 And you need to use our nginx with the module. Other nginx may not work.
 
-Says the nginx source folder is `./nginx-1.6.0`, then you could configure nginx:
-* First go to `nginx-1.6.0` folder. Execute `./configure --add-module=../src --prefix=/usr/local/nginxXml`
-* Then, go to `nginx-1.6.0/objs/Makefile`, delete `-Werror` in line 2.
-* Return to `nginx-1.6.0` folder, `make && sudo make install`.
+You can get nginx by:
+* `wget http://nginx.org/download/nginx-1.6.3.tar.gz`
+* `tar xzf nginx-1.6.3.tar.gz`
+
+Says the nginx source folder is `./nginx-1.6.3`, then you could configure nginx:
+* First go to `nginx-1.6.3` folder. Execute `./configure --add-module=../src --prefix=/usr/local/nginxXml`
+* Then, go to `nginx-1.6.3/objs/Makefile`, delete `-Werror` in line 2.
+* Return to `nginx-1.6.3` folder, `make && sudo make install`.
 * Then you could find `nginx` in `/usr/local/nginxXml`
 
 We give `doc/nginx.conf` as an example. The `ticketups` in `upstream test` block is what you need to write.
