@@ -13,12 +13,13 @@ If not, you could learn it at [mp.weixin.qq.com](https://mp.weixin.qq.com).
 Installation
 ---------------------------
 Installation Instruction: (Tested in ubuntu 14.04)
-* First, you must have `libxml`, `pcre` and `zlib` installed. If not, you need:
+* First, you must have `libxml`, `pcre` and `zlib` installed.
+  If not, you need:  
   `sudo apt-get install libxml2-dev libpcre3-dev zlib1g-dev`
 * Add a soft link: `sudo ln -s libxml2/libxml /usr/include/libxml`
 
-And you need to use our nginx with the module. Other nginx may not work.
-You can get nginx by:
+And you need to use `1.6.x` nginx with this module. Other nginx may not work.
+You can get nginx by:  
 `wget http://nginx.org/download/nginx-1.6.3.tar.gz &&tar xzf nginx-1.6.3.tar.gz`
 
 Says the nginx source folder is `./nginx-1.6.3`, then you should modify nginx:
