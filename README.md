@@ -25,7 +25,7 @@ You can get nginx by:
 Says the nginx source folder is `./nginx-1.6.3`, then you should modify nginx:
 * First go to `nginx-1.6.3` folder.
 * `cp -af ../src/ngx_http_upstream.h src/http/`
-* `sed -i 's/.*-Werror.*//g' gcc`. If not, after `./configure`,  
+* `sed -i 's/.*-Werror.*//g' auto/cc/gcc`. If not, after `./configure`,  
   you can also go to `nginx-1.6.3/objs/Makefile`, delete `-Werror` in line 2.
 
 Compile:
