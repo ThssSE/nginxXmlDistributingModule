@@ -13,18 +13,18 @@ If not, you could learn it at [mp.weixin.qq.com](https://mp.weixin.qq.com).
 Installation
 ---------------------------
 Installation Instruction: (Tested in ubuntu 14.04)
-* First, you must have `libxml`, `pcre` and `zlib` installed. If not, you need:  
+* First, you must have `libxml`, `pcre` and `zlib` installed. If not, you need:
   `sudo apt-get install libxml2-dev libpcre3-dev zlib1g-dev`
 * Add a soft link: `sudo ln -s libxml2/libxml /usr/include/libxml`
 
-And you need to use 1.6.x nginx with the module. Other nginx may not work.
-You can get nginx by:  
+And you need to use our nginx with the module. Other nginx may not work.
+You can get nginx by:
 `wget http://nginx.org/download/nginx-1.6.3.tar.gz &&tar xzf nginx-1.6.3.tar.gz`
 
 Says the nginx source folder is `./nginx-1.6.3`, then you should modify nginx:
 * First go to `nginx-1.6.3` folder.
 * `cp -af ../src/ngx_http_upstream.h src/http/`
-* `sed -i 's/.*-Werror.*//g' gcc`. If not, after `./configure`,
+* `sed -i 's/.*-Werror.*//g' gcc`. If not, after `./configure`,  
   you can also go to `nginx-1.6.3/objs/Makefile`, delete `-Werror` in line 2.
 
 Compile:
@@ -35,7 +35,8 @@ Compile:
 
 We give `doc/nginx.conf` as an example.
 The `ticketups` in `upstream test` block is what you need to write.
-You could use regular expression in xml body to match each server.  
+You could use regular expression in xml body to match each server.
+
 You could use re in `Content, MsgType, CreateTime, FromUserName` and so on.
 If the message couldn't be matched by any server, it's sent to the last server.
 
