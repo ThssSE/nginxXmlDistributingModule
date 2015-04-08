@@ -25,7 +25,7 @@ Says the nginx source folder is `./nginx-1.6.0`, then you could configure nginx:
 * Return to `nginx-1.6.0` folder, `make && sudo make install`.
 * Then you could find `nginx` in `/usr/local/nginxXml`
 
-We give an conf file for example. The `server`s in `upstream` block is what you need to write.
+We give `doc/nginx.conf` as an example. The `ticketups` in `upstream test` block is what you need to write.
 You could use regular expression in xml body to match each server. You could use re in `Content, MsgType, CreateTime, FromUserName` and so on. If the message couldn't be matched by any server, it's sent to the last server.
 
 
