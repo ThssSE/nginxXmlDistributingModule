@@ -1,2 +1,5 @@
 /nginx*
 .idea/*
+*.tar
+*.gz
+*.tgz
